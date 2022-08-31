@@ -1,0 +1,6 @@
+
+<RCC>
+  <qresource prefix="propagatezincdatastep">
+    <file>images/registration.png</file>
+  </qresource>
+</RCC>
