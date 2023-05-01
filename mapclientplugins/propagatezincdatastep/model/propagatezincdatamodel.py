@@ -1,10 +1,10 @@
 import os
 
-from opencmiss.utils.zinc.field import create_field_finite_element, find_or_create_field_group
-from opencmiss.utils.zinc.general import ChangeManager
-from opencmiss.zinc.context import Context
-from opencmiss.zinc.field import Field
-from opencmiss.zinc.status import OK as ZINC_OK
+from cmlibs.utils.zinc.field import create_field_finite_element, find_or_create_field_group
+from cmlibs.utils.zinc.general import ChangeManager
+from cmlibs.zinc.context import Context
+from cmlibs.zinc.field import Field
+from cmlibs.zinc.status import OK as ZINC_OK
 
 
 class OpenCMISSPropagateFileReadFailed(Exception):
