@@ -59,7 +59,7 @@ class PropagateZincDataModel(object):
         for data_group in data_groups:
             if data_group in mesh_groups:
                 mesh_group_field = mesh_field_module.findFieldByName(data_group).castGroup()
-                element_group = mesh_group_field.getFieldElementGroup(mesh_mesh_3).getMeshGroup()
+                element_group = mesh_group_field.getMeshGroup(mesh_mesh_3)
                 element_iter = element_group.createElementiterator()
                 element = element_iter.next()
                 propagation_points = []
@@ -71,13 +71,9 @@ class PropagateZincDataModel(object):
                     element = element_iter.next()
 
                 output_group_field = find_or_create_field_group(output_field_module, data_group)
-                output_node_group_field = output_group_field.getFieldNodeGroup(output_data_points)
-                if not output_node_group_field.isValid():
-                    output_node_group_field = output_group_field.createFieldNodeGroup(output_data_points)
-
-                output_nodeset_group = output_node_group_field.getNodesetGroup()
+                output_nodeset_group = output_group_field.getOrCreateNodesetGroup(output_data_points)
                 data_group_field = data_field_module.findFieldByName(data_group).castGroup()
-                data_nodeset_group = data_group_field.getFieldNodeGroup(data_data_points).getNodesetGroup()
+                data_nodeset_group = data_group_field.getNodesetGroup(data_data_points)
                 node_iter = data_nodeset_group.createNodeiterator()
                 node = node_iter.next()
                 while node.isValid():
