@@ -33,8 +33,8 @@ readme = readfile("README.rst", split=True)[3:]  # Skip title
 source_license = readfile("LICENSE")
 requires = [
     'PySide6',
-    'opencmiss.zinc',
-    'opencmiss.utils',
+    'cmlibs.zinc',
+    'cmlibs.utils',
 ]  # Minimal requirements listing. Insert additional dependencies here.
 
 
