@@ -1,9 +1,9 @@
-.. _mcp-sds-converter-specification:
+.. _mcp-propagate-zinc-data-specification:
 
 Specification
 -------------
 
-.. _hdg-mcp-sds-converter-ports:
+.. _hdg-mcp-propagate-zinc-data-ports:
 
 This plugin:
 
