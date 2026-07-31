@@ -1,0 +1,3 @@
+PySide6
+cmlibs.zinc
+cmlibs.utils
